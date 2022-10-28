@@ -28,5 +28,9 @@ public class FunnyAlgorithmTest {
 		fa = new FunnyAlgorithms();
 	}
 	
+	@Test
+	public void stringToIntConverterWorksWithSpaces() {		
+		assertEquals(233, fa.stringToIntConverter("233 "));
+	}
 	
 }
