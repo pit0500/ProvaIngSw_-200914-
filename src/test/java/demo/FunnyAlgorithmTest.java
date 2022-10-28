@@ -28,6 +28,11 @@ public class FunnyAlgorithmTest {
 		fa = new FunnyAlgorithms();
 	}
 	
+	@Test
+	public void stringToIntConverterWorksNormal() {
+		assertEquals(821, fa.stringToIntConverter("821"));
+	}
+
 	
 	
 }
