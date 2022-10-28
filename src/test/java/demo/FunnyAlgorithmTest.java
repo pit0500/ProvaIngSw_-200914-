@@ -33,4 +33,13 @@ public class FunnyAlgorithmTest {
 		assertEquals(233, fa.stringToIntConverter("233 "));
 	}
 	
+	@Test(expected = NumberFormatException.class)
+	public void stringToIntConverterThrowsNFException() {
+		System.out.println("stringToIntConverterThrowsNFException");
+		fa.stringToIntConverter("ew5425");
+		fa.stringToIntConverter("2.3");
+	}
+	
+	
+	
 }
