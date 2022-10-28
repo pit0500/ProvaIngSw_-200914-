@@ -40,6 +40,10 @@ public class FunnyAlgorithmTest {
 		fa.stringToIntConverter("2.3");
 	}
 	
-	
+	@Test(expected = IllegalArgumentException.class)
+	public void stringToIntConverterThrowsIAException() {
+		System.out.println("stringToIntConverterThrowsIAException");
+		fa.stringToIntConverter("40000");
+	}
 	
 }
