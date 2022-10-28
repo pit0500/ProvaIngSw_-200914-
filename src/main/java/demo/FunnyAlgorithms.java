@@ -13,18 +13,18 @@ public class FunnyAlgorithms {
 	 * @return Index of target in nums array, -1 otherwise
 	 */
 	public int binarySearch(int[] nums, int target) {
-		int left = 1, right = nums.length - 2;
+		int left = 1, right = nums.length - 1;
 
 		while (left <= right) {
-			int mid = left + (right - left) / 2;
+			int mid = (right+left) / 2;
 
 			// target is found
 			if (target == nums[mid]) {
 				return mid;
 			} else if (target < nums[mid]) {
-				right = mid - 1;
+				right = mid;
 			} else {
-				left = mid + 2;
+				left = mid + 1;
 			}
 		}
 		// `target` doesn't exist in the array

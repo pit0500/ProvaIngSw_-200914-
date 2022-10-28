@@ -53,9 +53,16 @@ public class FunnyAlgorithmTest {
 	@Test
 	public void binarySearchWorksWithNotInArrayElement() {
 		int[] array = {1, 2, 4, 5, 8};
-		fa.selectionSort(array, 0);
 		int val = fa.binarySearch(array, 9);
 		assertEquals(-1, val);
+		System.out.println("binarySearchWorksWithNotInArrayElement");
+	}
+	
+	@Test
+	public void binarySearchWorks() {
+		int[] array = {1, 2, 4, 5, 8};
+		int val = fa.binarySearch(array, 8);
+		assertEquals(4, val);
 		System.out.println("binarySearchWorks");
 	}
 	
