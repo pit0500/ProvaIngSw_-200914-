@@ -50,6 +50,15 @@ public class FunnyAlgorithmTest {
 		System.out.println("selectionSortWorks");
 	}
 	
+	@Test
+	public void binarySearchWorksWithNotInArrayElement() {
+		int[] array = {5, 4, 8, 1, 2};
+		fa.selectionSort(array, 0);
+		int val = fa.binarySearch(array, 9);
+		assertEquals(-1, val);
+		System.out.println("binarySearchWorks");
+	}
+	
 	@AfterClass
 	public static void afterClass() {
 		System.out.println("After Class");
