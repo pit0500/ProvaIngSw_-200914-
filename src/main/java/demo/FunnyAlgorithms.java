@@ -44,15 +44,11 @@ public class FunnyAlgorithms {
 	 * @param order Direction to sort the array (0:Ascending, 1:Descending)
 	 */
 	public void selectionSort(int[] array, int order) {
-
-		if (order != 0 && order != 1) {
-			throw new IllegalArgumentException("L'ordine può essere 0 o 1.");
-		}
-
+		assert(order == 0 || order == 1);
 		for (int i = 0; i < array.length - 2; i++) {
 			int min = i;
 			for (int j = i + 1; j < array.length; j++) {
-				boolean orderCondition = order == 0 ? array[j] > array[min] : array[j] < array[min];
+				boolean orderCondition = order == 0 ? array[j] < array[min] : array[j] > array[min];
 				if (orderCondition) {
 					min = j;
 				}

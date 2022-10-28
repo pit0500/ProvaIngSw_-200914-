@@ -1,6 +1,9 @@
 package demo;
 
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
+
+import java.util.Arrays;
 
 import org.joda.time.DateTime;
 import org.junit.After;
@@ -17,9 +20,7 @@ import org.junit.Rule;
 
 public class FunnyAlgorithmTest {
 
-	private static FunnyAlgorithms fa;
-	
-	private static int[] array = {5, 4, 8, 1, 2}; 
+	private static FunnyAlgorithms fa; 
 	
 	@BeforeClass
 	public static void testConstructor() {
@@ -38,6 +39,15 @@ public class FunnyAlgorithmTest {
 		System.out.println("stringToIntConverterThrowsNFException");
 		fa.stringToIntConverter("ew5425");
 		fa.stringToIntConverter("2.3");
+	}
+	
+	@Test
+	public void selectionSortWorks() {
+		int[] array = {5, 4, 8, 1, 2};
+		int[] ordinato = {1, 2, 4, 5, 8};
+		fa.selectionSort(array, 0);
+		assertArrayEquals(ordinato, array);
+		System.out.println("selectionSortWorks");
 	}
 	
 	@AfterClass
