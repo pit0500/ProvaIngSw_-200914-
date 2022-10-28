@@ -1,6 +1,8 @@
 package demo;
 
 public class FunnyAlgorithms {
+	
+	public FunnyAlgorithms() {}
 
 	/**
 	 * Binary Search è un algoritmo di ricerca per trovare la posizione di un
@@ -69,7 +71,7 @@ public class FunnyAlgorithms {
 	 * @return
 	 * @throws UnsupportedOperationException
 	 */
-	public int stringToIntConverter(String number) {
+	public int stringToIntConverter(String number) throws UnsupportedOperationException {
 		if (number.charAt(number.length()-1) == ' ') {
 			char[] tmparr = new char[number.length()-1];
 			for (int i = 0; i < number.length()-1; ++i)
