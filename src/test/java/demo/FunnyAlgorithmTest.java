@@ -28,8 +28,5 @@ public class FunnyAlgorithmTest {
 		fa = new FunnyAlgorithms();
 	}
 	
-}
-
-	
 	
 }
